@@ -1,3 +1,5 @@
 var tou8 = require('../');
 var buf = new Buffer('whatever');
-console.log(tou8(buf));
+var a = tou8(buf);
+console.log(a.constructor.name);
+console.log(a);
