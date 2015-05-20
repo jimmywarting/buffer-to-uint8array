@@ -22,6 +22,8 @@ var tou8 = require('buffer-to-uint8array')
 
 Convert `buf`, a `Buffer` or `string` to a `Uint8Array`.
 
+If `buf` is already a Uint8Array, it will be returned.
+
 # install
 
 With [npm](https://npmjs.org) do:
