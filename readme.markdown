@@ -1,28 +1,27 @@
 # buffer-to-uint8array
 
-convert a buffer (or string) to a Uint8Array
+Convert a ArrayBuffer, ArrayBufferView (or string) to a Uint8Array
 
 # example
 
 ``` js
-var tou8 = require('buffer-to-uint8array');
-var buf = new Buffer('whatever');
-var a = tou8(buf);
-console.log(a.constructor.name);
-console.log(a);
+import tou8 from 'buffer-to-uint8array'
+const buf = Buffer.from('whatever')
+const a = tou8(buf)
+console.log(a.constructor.name)
+console.log(a)
 ```
 
 # methods
 
 ``` js
-var tou8 = require('buffer-to-uint8array')
+import tou8 from 'buffer-to-uint8array'
 ```
 
-## var u = tou8(buf)
+## const u = tou8(buf)
 
-Convert `buf`, a `Buffer` or `string` to a `Uint8Array`.
-
-If `buf` is already a Uint8Array, it will be returned.
+Convert `buf`, a `ArrayBuffer`, `ArrayBufferView` or `String` to a `Uint8Array`.
+It will use same underlying ArrayBuffer to avoid copying
 
 # install
 
